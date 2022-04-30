@@ -1,15 +1,14 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <SliderComponent/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import SliderComponent from './components/SliderComponent.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    SliderComponent
   }
 }
 </script>

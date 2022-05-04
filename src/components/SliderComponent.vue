@@ -28,6 +28,7 @@ export default {
         images: [
           { id: "bc011", scr: "img1.jpg", alt: "images 01" },
           { id: "bc012", scr: "img2.jpg", alt: "images 02" },
+          { id: "bc012", scr: "img2.jpg", alt: "images 02" },
         ],
       },
     };
@@ -46,7 +47,7 @@ export default {
 .slider {
   position: relative;
   width: 686px;
-  height: 923px;
+  height: 880px;
   // width: 200px;
   // height: 300px;
   background-color: rgb(89, 250, 129);
@@ -58,16 +59,20 @@ export default {
 
   &__prew-images {
     position: absolute;
-    top: 3px;
-    left: 3px;
-    width: 20%;
-    height: 50%;
-    background-color: rgb(255, 196, 1);
+    top: 24px;
+    left:24px;
+    max-width: 70px;
+    // height: 50%;
+    // background-color: rgb(255, 196, 1);
+    border: 1px dotted rgba(164, 28, 146, 0.5);
+// }
 
     img {
-      width: 100px;
-      height: 100px;
+      width: 70px;
+      height: 91px;
+      margin-bottom: 3px;
     }
   }
 }
+
 </style>

@@ -2,20 +2,20 @@
   <div class="gallery-comp">
     <div class="gallery-comp__top">Посмотреть все стили</div>
     <div class="gallery-comp__left">
-      <img src="../assets/del.jpg" alt="" />
+      <img src="../assets/g1.jpg" alt="" />
     </div>
     <div class="gallery-comp__right">
       <div class="gallery-comp__right-small-image">
-        <img src="../assets/del.jpg" alt="" />
+        <img src="../assets/g2.jpg" alt="" />
       </div>
       <div class="gallery-comp__right-small-image">
-        <img src="../assets/del.jpg" alt="" />
+        <img src="../assets/g3.png" alt="" />
       </div>
       <div class="gallery-comp__right-small-image">
-        <img src="../assets/del.jpg" alt="" />
+        <img src="../assets/g4.png" alt="" />
       </div>
       <div class="gallery-comp__right-small-image">
-        <img src="../assets/del.jpg" alt="" />
+        <img src="../assets/g5.png" alt="" />
       </div>
     </div>
   </div>
@@ -38,14 +38,13 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .gallery-comp {
-  // position: relative;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
 
   background-color: rgb(151, 60, 255);
-  // width: 100%;
 
   &__top {
     background-color: rgb(255, 196, 0);
@@ -57,32 +56,25 @@ export default {
     justify-content: center;
     align-items: center;
 
-    padding: 28px 0px 28px 0px;
-
-    font-family: "Open Sans";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 20px;
+    padding: 28px 0px 56px 0px;
 
     letter-spacing: 0.04em;
     text-decoration-line: underline;
     text-decoration-color: red;
-
-    color: #333333;
   }
 
   &__left {
     background-color: rgb(60, 73, 255);
-    width: 686px;
-    height: 688px;
-    // padding: 5px;
+    max-width: 49.3%;
+    img {
+      width: 100%;
+      height: 100%;
+    }
   }
 
   &__right {
     background-color: rgb(255, 60, 229);
-    width: 686px;
-    height: 688px;
+    max-width: 49.3%;
 
     display: flex;
     flex-wrap: wrap;
@@ -92,15 +84,12 @@ export default {
   }
 
   &__right-small-image {
-    width: calc(50% - 8px);
-    height: calc(50% - 8px);
-    background-color: rgb(179, 255, 2);
-    // padding: 8px;
-  }
-
-  img {
-    width: 100%;
-    height: 100%;
+    width: 48.8%;
+    margin-bottom: 2.4%;
+    img {
+      width: 100%;
+      // height: 10%;
+    }
   }
 }
 </style>

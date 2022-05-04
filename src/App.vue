@@ -33,18 +33,8 @@ export default {
 </script>
 
 <style lang="scss">
-* {
-  margin: 0;
-  padding: 0;
-}
 
-ul {
-  list-style-type: none;
-}
 
-li {
-  list-style-type: none;
-}
 
 #app {
   font-family: "Open Sans";
@@ -53,18 +43,39 @@ li {
   font-size: 14px;
   line-height: 20px;
   color: #333333;
+  min-height: 100%;
 }
 
 .wrapper {
-  min-height: 100%;
   overflow: hidden;
   border: 1px dotted rgb(0, 0, 0);
 }
 
 ._container {
-  max-width: 1390px;
+  max-width: 1400px;
   margin: 0 auto;
   border: 1px dotted rgb(255, 145, 0);
   padding: 0px 5px 0px 5px;
+  // margin: 0px 5px;
+}
+
+
+.ibg{
+
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+position: relative;
+}
+
+.ibg img{
+
+width: 0;
+height: 0;
+position: absolute;
+top: 0;
+left: 0;
+opacity: 0;
+visibility: hidden;
 }
 </style>

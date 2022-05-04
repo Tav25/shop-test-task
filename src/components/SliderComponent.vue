@@ -4,7 +4,7 @@
     <div class="slider__prew-images">
       <!-- <li v-for="n in slider.images">{{ n }}</li> -->
       <div v-for="(item, index) in slider.images" :key="item">
-        <img
+        <img class="ibg"
           v-on:click="test2(index)"
           :src="slider.path + item.scr"
           :alt="item.alt"
@@ -27,8 +27,11 @@ export default {
         currentImage: 0,
         images: [
           { id: "bc011", scr: "img1.jpg", alt: "images 01" },
-          { id: "bc012", scr: "img2.jpg", alt: "images 02" },
-          { id: "bc012", scr: "img2.jpg", alt: "images 02" },
+          { id: "bc011", scr: "img1.jpg", alt: "images 01" },
+          { id: "bc011", scr: "img1.jpg", alt: "images 01" },
+          // { id: "bc011", scr: "img1.jpg", alt: "images 01" },
+          // { id: "bc012", scr: "img2.jpg", alt: "images 02" },
+          // { id: "bc012", scr: "img2.jpg", alt: "images 02" },
         ],
       },
     };
@@ -46,18 +49,21 @@ export default {
 <style scoped lang="scss">
 .slider {
   position: relative;
-  max-width: 686px;
-  max-height: 880px;
-  border: 1px dotted rgb(234, 0, 255);
+  // width: 686px;
+  max-width: 100%;
+  // width: 500px;
+  // border: 1px dotted rgb(234, 0, 255);
 
+    // object-fit: fill;
   img {
-    width: 100%;
+    // border: 1px dotted rgb(0, 255, 234);
+    min-width: 100%;
     height: 100%;
   }
 
   &__prew-images {
     position: absolute;
-    top: 3.5%;
+    top: 2.7%;
     left: 3.5%;
     max-width: 10%;
     // height: 50%;
@@ -67,7 +73,7 @@ export default {
     img {
       width: 100%;
       // height: 91px;
-      // margin-bottom: 3px;
+      margin-bottom: 10%;
     }
   }
 }

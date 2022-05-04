@@ -1,6 +1,6 @@
 <template>
   <div class="slider">
-    <img :src="slider.path + slider.images[slider.currentImage].scr" alt="" />
+      <img :src="slider.path + slider.images[slider.currentImage].scr" alt="" />
     <div class="slider__prew-images">
       <!-- <li v-for="n in slider.images">{{ n }}</li> -->
       <div v-for="(item, index) in slider.images" :key="item">
@@ -46,11 +46,9 @@ export default {
 <style scoped lang="scss">
 .slider {
   position: relative;
-  width: 686px;
-  height: 880px;
-  // width: 200px;
-  // height: 300px;
-  background-color: rgb(89, 250, 129);
+  max-width: 686px;
+  max-height: 880px;
+  border: 1px dotted rgb(234, 0, 255);
 
   img {
     width: 100%;
@@ -59,20 +57,22 @@ export default {
 
   &__prew-images {
     position: absolute;
-    top: 24px;
-    left:24px;
-    max-width: 70px;
+    top: 3.5%;
+    left: 3.5%;
+    max-width: 10%;
     // height: 50%;
-    // background-color: rgb(255, 196, 1);
+    // //   // background-color: rgb(255, 196, 1);
     border: 1px dotted rgba(164, 28, 146, 0.5);
-// }
 
     img {
-      width: 70px;
-      height: 91px;
-      margin-bottom: 3px;
+      width: 100%;
+      // height: 91px;
+      // margin-bottom: 3px;
     }
   }
 }
 
+//
+
+//
 </style>

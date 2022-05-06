@@ -29,9 +29,9 @@ export default {
           { id: "bc011", scr: "img1.jpg", alt: "images 01" },
           { id: "bc011", scr: "img1.jpg", alt: "images 01" },
           { id: "bc011", scr: "img1.jpg", alt: "images 01" },
-          // { id: "bc011", scr: "img1.jpg", alt: "images 01" },
-          // { id: "bc012", scr: "img2.jpg", alt: "images 02" },
-          // { id: "bc012", scr: "img2.jpg", alt: "images 02" },
+          { id: "bc011", scr: "img1.jpg", alt: "images 01" },
+          { id: "bc012", scr: "img2.jpg", alt: "images 02" },
+          { id: "bc012", scr: "img2.jpg", alt: "images 02" },
         ],
       },
     };

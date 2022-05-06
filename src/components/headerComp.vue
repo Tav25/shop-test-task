@@ -21,12 +21,13 @@
           </li>
         </ul>
       </div>
+      <burgerComp class="burger-icon"></burgerComp>
     </div>
   </header>
 </template>
 
 <script>
-// import blockBuer from './blockBuer.vue';
+import burgerComp from "./Ui/burgerComp.vue";
 // import blockAboutUs from './blockAboutUs.vue';
 // import blockRegMail from './blockRegMail.vue';
 
@@ -36,7 +37,7 @@ export default {
     msg: String,
   },
   components: {
-    // blockBuer,
+    burgerComp,
     // blockAboutUs,
     // blockRegMail,
   },
@@ -118,11 +119,30 @@ li {
   color: #000000;
   // margin-left: 5px;
 }
+
+.icons {
+  flex: 1 1 auto;
+  text-align: right;
+}
 .icon {
   margin-right: 25px;
 }
 
 .icon:nth-last-child(1) {
   margin-right: 0px;
+}
+
+.burger-icon {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .icon:nth-last-child(1) {
+    margin-right: 25px;
+  }
+
+  .burger-icon {
+    display: flex;
+  }
 }
 </style>

@@ -6,7 +6,7 @@ export default {
   name: "ButtonUi",
 };
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 .btn {
   display: flex;
   flex-direction: row;

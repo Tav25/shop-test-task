@@ -1,7 +1,7 @@
 <template>
   <div class="_container ContentComp">
-    <SliderComponent style="max-width: 49.5%;"></SliderComponent>
-    <ProductCardComponent style="max-width: 49.5%;"></ProductCardComponent>
+    <SliderComponent style="width: 49.5%;"></SliderComponent>
+    <ProductCardComponent style="width: 49.5%;"></ProductCardComponent>
     <!-- <SliderComponent></SliderComponent> -->
     <GalleryComp></GalleryComp>
   </div>

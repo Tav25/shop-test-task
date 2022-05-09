@@ -1,12 +1,11 @@
 <template>
   <div class="blockBuer">
-    <div class="blockBuer__title">{{ msg }}</div>
-
-    <li class="blockBuer__item"><a href="https://">Каталог</a></li>
-    <li class="blockBuer__item"><a href="https://">Акции</a></li>
-    <li class="blockBuer__item">
-      <a href="https://">Бренды</a>
-    </li>
+    <div class="blockBuer__title">{{ title }}</div>
+    <ul>
+      <li class="blockBuer__item" v-for="item in menu">
+        <a :href="item.link">{{ item.text }}</a>
+      </li>
+    </ul>
   </div>
 </template>
 
@@ -14,7 +13,8 @@
 export default {
   name: "blockBuer",
   props: {
-    msg: String,
+    title: String,
+    menu: Array,
   },
 };
 </script>
@@ -22,7 +22,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .blockBuer {
-  min-width: 335px;
+  min-width: 200px;
   margin: 0px 8px 0px 8px;
   // background-color: rgb(255, 165, 29);
 
@@ -41,7 +41,7 @@ export default {
 
   &__item {
     font-size: 14px;
-    line-height: 142%;
+    line-height: 160%;
     letter-spacing: 0.04em;
 
     flex: none;
@@ -52,6 +52,9 @@ export default {
 
   &__item:nth-last-child(1) {
     padding-bottom: 20px;
+  }
+
+  li {
   }
 }
 </style>

@@ -33,29 +33,20 @@ import burgerComp from "./Ui/burgerComp.vue";
 
 export default {
   name: "headerComp",
-  props: {
-    msg: String,
-  },
+
   components: {
     burgerComp,
-    // blockAboutUs,
-    // blockRegMail,
   },
   data() {
     return {
       showNavbar: true,
       lastScrollPosition: 0,
-      // scrollValue: 0,
     };
   },
 
   mounted() {
     this.lastScrollPosition = window.pageYOffset;
     window.addEventListener("scroll", this.onScroll);
-    // const viewportMeta = document.createElement("meta");
-    // viewportMeta.name = "viewport";
-    // viewportMeta.content = "width=device-width, initial-scale=1";
-    // document.head.appendChild(viewportMeta);
   },
 
   beforeDestroy() {
@@ -63,12 +54,12 @@ export default {
   },
 
   methods: {
-    OFFSET: 40,
+    headerHeight: 40,
     onScroll() {
       if (window.pageYOffset < 0) {
         return;
       }
-      if (Math.abs(window.pageYOffset - this.lastScrollPosition) < 40) {
+      if (Math.abs(window.pageYOffset - this.lastScrollPosition) < this.headerHeight) {
         return;
       }
       this.showNavbar = window.pageYOffset < this.lastScrollPosition;
@@ -78,21 +69,17 @@ export default {
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .headerComp {
-  // background-color: #acacac;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 50;
-  // width: 1390px;
-  // z-index: 1000;
 }
 
 .header-container {
-  background-color: #acacac;
+  background-color: #ffffff;
   min-height: 40px;
   display: flex;
   flex-wrap: wrap;
@@ -117,7 +104,6 @@ li {
   text-transform: uppercase;
 
   color: #000000;
-  // margin-left: 5px;
 }
 
 .icons {

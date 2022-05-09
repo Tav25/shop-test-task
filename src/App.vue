@@ -1,30 +1,18 @@
 <template>
   <div class="wrapper">
-    <ContentComp style=" margin-top: 64px "></ContentComp>
+    <ContentComp style="margin-top: 64px"></ContentComp>
     <headerComp></headerComp>
     <footerComp></footerComp>
   </div>
-  <!-- <ProductCardComponent></ProductCardComponent> -->
-  <!-- <ButtonUi>Добавить в корзину</ButtonUi> -->
-  <!-- <HeartComponent></HeartComponent> -->
-  <!-- <SliderComponent /> -->
 </template>
 
 <script>
-// import SliderComponent from "@/components/SliderComponent.vue";
-// import ButtonUi from "@/components/Ui/ButtonUi.vue";
-// import HeartComponent from "@/components/HeartComponent.vue";
-// import ProductCardComponent from "@/components/ProductCardComponent.vue";
 import ContentComp from "@/components/ContentComp.vue";
 import footerComp from "@/components/footerComp.vue";
 import headerComp from "@/components/headerComp.vue";
 export default {
   name: "App",
   components: {
-    // SliderComponent,
-    // ButtonUi,
-    // HeartComponent,
-    // ProductCardComponent,
     footerComp,
     headerComp,
     ContentComp,
@@ -33,8 +21,7 @@ export default {
 </script>
 
 <style lang="scss">
-
-
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,regular,500,600,700,800,300italic,italic,500italic,600italic,700italic,800italic);
 
 #app {
   font-family: "Open Sans";
@@ -44,6 +31,10 @@ export default {
   line-height: 20px;
   color: #333333;
   min-height: 100%;
+}
+
+a {
+  color: #333333;
 }
 
 .wrapper {
@@ -59,23 +50,20 @@ export default {
   // margin: 0px 5px;
 }
 
-
-.ibg{
-
-background-position: center;
-background-size: cover;
-background-repeat: no-repeat;
-position: relative;
+.ibg {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
 }
 
-.ibg img{
-
-width: 0;
-height: 0;
-position: absolute;
-top: 0;
-left: 0;
-opacity: 0;
-visibility: hidden;
+.ibg img {
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
 }
 </style>

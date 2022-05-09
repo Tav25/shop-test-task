@@ -17,15 +17,28 @@
         </svg>
       </div>
     </div>
-    <button>Подписаться</button>
+    <div class="blockRegMail__btn">
+      <ButtonBorderUi>Подписаться</ButtonBorderUi>
+    </div>
   </div>
+
+<messageComp>Alert</messageComp>
 </template>
 
 <script>
+import ButtonBorderUi from "./Ui/ButtonBorderUi.vue";
+import messageComp from "./Ui/messageComp.vue";
 export default {
   name: "blockRegMail",
-  props: {
-    msg: String,
+  components: {
+    ButtonBorderUi,
+    messageComp
+  },
+  data() {
+    return {
+      email: "",
+      isEmailTrue: false,
+    };
   },
 };
 </script>
@@ -33,26 +46,20 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .blockRegMail {
-  min-width: 452px;
+  width: 452px;
   margin: 0px 8px 0px 8px;
   // background-color: rgb(236, 227, 227);
 
   &__title {
-    font-family: "Open Sans";
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
-    /* identical to box height, or 150% */
 
     letter-spacing: 0.04em;
     text-transform: uppercase;
 
-    /* Brand / Black */
-
     color: #333333;
-
-    /* Inside auto layout */
 
     flex: none;
     order: 0;
@@ -68,14 +75,13 @@ export default {
     border-bottom: 2px solid #c4c4c4;
 
     color: #333333;
-    // background-color: rgba(255, 255, 255, 0.281);
 
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     padding: 0px 8px 0px 16px;
-    margin: 16px 0px 24px 0px;
+    margin: 22px 0px 24px 0px;
 
     input {
       width: calc(100% - 16px);
@@ -94,6 +100,13 @@ export default {
 
       letter-spacing: 0.04em;
     }
+  }
+
+  &__btn {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 32px;
   }
 }
 </style>

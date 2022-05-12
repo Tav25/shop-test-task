@@ -25,7 +25,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .message {
-  position: absolute;
+  position: fixed;
   // top: 50%;
   left: 25%;
   z-index: 100;
@@ -40,6 +40,8 @@ export default {
   /* Brand / Black */
 
   border: 2px solid #ffa600;
+  border-radius: 10px;
+  box-shadow: 5px 5px 2px 1px rgba(0, 0, 255, .2);
 
   font-family: "Open Sans";
   font-style: normal;

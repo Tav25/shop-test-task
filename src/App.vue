@@ -3,6 +3,7 @@
     <ContentComp style="margin-top: 64px"></ContentComp>
     <headerComp></headerComp>
     <footerComp></footerComp>
+    <messageComp>Alert</messageComp>
   </div>
 </template>
 
@@ -10,12 +11,14 @@
 import ContentComp from "@/components/ContentComp.vue";
 import footerComp from "@/components/footerComp.vue";
 import headerComp from "@/components/headerComp.vue";
+import messageComp from "./components/Ui/messageComp";
 export default {
   name: "App",
   components: {
     footerComp,
     headerComp,
     ContentComp,
+    messageComp
   },
 };
 </script>

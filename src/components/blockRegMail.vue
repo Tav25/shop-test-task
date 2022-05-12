@@ -22,17 +22,14 @@
     </div>
   </div>
 
-<messageComp>Alert</messageComp>
 </template>
 
 <script>
 import ButtonBorderUi from "./Ui/ButtonBorderUi.vue";
-import messageComp from "./Ui/messageComp.vue";
 export default {
   name: "blockRegMail",
   components: {
     ButtonBorderUi,
-    messageComp
   },
   data() {
     return {
